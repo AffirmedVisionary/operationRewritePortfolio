@@ -1,38 +1,107 @@
-.App {
+
+.App{
+  max-width: 100vw;
+  margin: auto;
+  height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+  background-color: #000;
+  border: 2px solid rgb(255, 255, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.box{
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+#main-col {
+  max-width: 100vw;
+  display: inline;
+  border: 2px solid rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  align-content: center;
+  overflow: auto;
+}
+
+.screenContainer {
+  height: 97vh;
+  overflow: scroll;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  align-content: center;
+
+}
+#side-col {
+  display: none;
+}
+
+img {
+  max-width: 80%;
+  max-height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  #navspace {
+    display: none;
+  }
+  #side-col {
+    height: 100vh;
+    display: inline;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    justify-content: center;
+    max-width: 20%;
+    border: 2px solid rgb(255, 255, 255);
+
+  }
+  #main-col {
+    height: 100vh;
+    max-width: 80%;
+    padding-left: 0;
+    margin: auto;
+    overflow: auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.sidenav {
+  height: 100vh;
+  width: 19%;
+  margin: auto;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  overflow-x: hidden;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  line-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.sidenav h3 {
+  text-align: center;
+  margin: auto 0;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidenav h3:hover, .sidenav h3 active {
+  color: #f1f1f1;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav h3 {font-size: 18px;}
 }
