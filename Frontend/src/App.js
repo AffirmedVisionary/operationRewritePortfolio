@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 // import { Grid, Segment } from 'semantic-ui-react'
 
 // import Sidebar from "./components/Sidebar"
-import Sidebar2 from "./components/Sidebar2"
+import Sidebar3 from "./components/Sidebar3"
 import Footer from "./components/Footer"
 import ResumeScreen from "./screens/ResumeScreen"
 import BdcvScreen from "./screens/BdcvScreen"
@@ -29,11 +29,10 @@ function App() {
           <div className='row'>
          
             <div className='col' id='side-col'>
-                            <Sidebar2 />
+                            <Sidebar3 />
             
               </div>
             <div className='col' id='main-col'>
-            <div className='box'>
                 <Container id='screenContainer'>
               <Route path='/' component={HomeScreen} exact />
               <Route path='/about' component={AboutScreen} exact />
@@ -43,9 +42,10 @@ function App() {
               <Route path='/profile' component={ProfileScreen} exact />
               <Route path='/content' component={ContentScreen} exact />
               <Route path='/contact' component={ContactScreen} exact />
-              </Container>
-              </div>
-              <Footer />
+              <div className='footer'>
+                <Footer />
+                </div>
+                </Container>
             </div>
           {/*         <div className="col">
           <div className="box">Col 3/3</div>
