@@ -1,5 +1,5 @@
 import React from "react"
-import { Col, Row } from "react-bootstrap"
+import { Col, Row, Button } from "react-bootstrap"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import TwitterIcon from "@material-ui/icons/Twitter"
@@ -53,108 +53,21 @@ const Socials = () => {
   ]
 
   return (
-    <Row>
-      {socialList.map((social) => (
-        <Col>
-            <a href={`${social.link}`} target='_blank' rel='noreferrer'>
-              <social.icon fontSize='large' />
-              </a>
-              <br />
-              <span className='social-tooltip'>{social.tooltip}</span>
-        </Col>
-      ))}
-    </Row>
+    <>
+      <Row>
+        <Col>Socials</Col>
+      </Row>
+      <Row>
+        {socialList.map((social) => (
+          <Col>
+              <Button href={social.link} variant='link' >
+                <social.icon fontSize='large' />
+              </Button>
+          </Col>
+        ))}
+      </Row>
+    </>
   )
-
-  /*   return (
-    <Row>
-      <Col lg={2}>
-        <OverlayTrigger
-          key='bottom'
-          placement='bottom'
-          overlay={
-            <Tooltip id='tooltip-bottom'>
-              <strong>Main Instagram Page</strong>.
-            </Tooltip>
-          }
-        >
-          <a
-            href='https://www.instagram.com/affirmedvisionary/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <InstagramIcon fontSize='large' />
-          </a>
-        </OverlayTrigger>
-      </Col>
-      <Col lg={2}>
-        <OverlayTrigger
-          key='bottom'
-          placement='bottom'
-          overlay={
-            <Tooltip id='tooltip-bottom'>
-              <strong>All things merch</strong>.
-            </Tooltip>
-          }
-        >
-          <a
-            href='https://www.instagram.com/affirmedmerch/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <InstagramIcon fontSize='large' />
-          </a>
-        </OverlayTrigger>
-      </Col>
-      <Col lg={2}>
-        <OverlayTrigger
-          key='bottom'
-          placement='bottom'
-          overlay={
-            <Tooltip id='tooltip-bottom'>
-              <strong>ANCH Appreciation</strong>.
-            </Tooltip>
-          }
-        >
-          <a
-            href='https://www.instagram.com/affirmedv/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <InstagramIcon fontSize='large' />
-          </a>
-        </OverlayTrigger>
-      </Col>
-      <Col lg={2}>
-        <a
-          href='https://www.linkedin.com/in/affirmedvisionary/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <LinkedInIcon fontSize='large' />
-        </a>
-      </Col>
-      <Col lg={2}>
-        <a
-          href='https://twitter.com/AffirmedVision'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <TwitterIcon fontSize='large' />
-        </a>
-      </Col>
-      <Col lg={2}>
-        <a
-          href='https://www.pinterest.co.uk/affirmedvisionary'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <PinterestIcon fontSize='large' />
-        </a>
-      </Col>
-    </Row>
-  )
- */
 }
 
 export default Socials
