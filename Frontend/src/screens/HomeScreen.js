@@ -1,13 +1,40 @@
-import React from 'react'
+import React from "react"
+import { Jumbotron, Col, Button, Row } from "react-bootstrap"
+import NewsCards from "../components/NewsCards"
 
 const HomeScreen = () => {
-    return (
-        <>
-            <h1>Home</h1>
-            <p>Welcome to the hub of Charlene Grant</p>
-            <img src='https://cdn.pixabay.com/photo/2018/05/12/03/00/shy-3392329_1280.jpg' alt='test girl at sea' />
-        </>
-    )
+  return (
+    <>
+      <Jumbotron id='home-jumbo'>
+        <h1>
+          <em>Charlene Grant</em>
+        </h1>
+        <h3>Welcome,</h3>
+        <p>
+          Get directions, learn with free content, shop with me, work with me
+        </p>
+        <p>
+          <Button variant='light'>Contact Me</Button>
+        </p>
+      </Jumbotron>
+        <Row>
+        <Col>
+          <h2>News</h2>
+        </Col>
+        </Row>
+        <Row>
+        <Col>
+          <NewsCards />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        <h1>Home</h1>
+      <p>Welcome to the hub of Charlene Grant</p>
+        </Col>
+      </Row>
+    </>
+  )
 }
 
 export default HomeScreen
