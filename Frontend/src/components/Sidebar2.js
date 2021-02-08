@@ -19,6 +19,9 @@ const Sidebar2 = () => {
             <LinkContainer to='/affirmed'>
             <h3>Affirmed</h3>
           </LinkContainer>
+            <LinkContainer to='/shop'>
+            <h3>Shop</h3>
+          </LinkContainer>
             <LinkContainer to='/profile'>
             <h3>Profile</h3>
           </LinkContainer>
