@@ -1,7 +1,7 @@
 import React from "react"
 // import items from "./screens/Sidebar-Items"
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import HomeScreen from "./screens/HomeScreen"
 import AboutScreen from "./screens/AboutScreen"
 import "./App.css"
@@ -17,6 +17,7 @@ import AffirmedScreen from "./screens/AffirmedScreen"
 import ProfileScreen from "./screens/ProfileScreen"
 import ContentScreen from "./screens/ContentScreen"
 import ContactScreen from "./screens/ContactScreen"
+import roundtableScreen from "./screens/slides/roundtableScreen"
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
               <Route path='/affirmed' component={AffirmedScreen} exact />
               <Route path='/profile' component={ProfileScreen} exact />
               <Route path='/content' component={ContentScreen} exact />
+              <Route path='/slides/bch-roundtable' component={roundtableScreen} exact />
               <Route path='/contact' component={ContactScreen} exact />
               <Footer />
             </Col>
