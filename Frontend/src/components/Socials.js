@@ -59,7 +59,7 @@ const Socials = () => {
       </Row>
       <Row>
         {socialList.map((social) => (
-          <Col>
+          <Col sm={1}>
               <Button href={social.link} variant='link' >
                 <social.icon fontSize='large' />
               </Button>

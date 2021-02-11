@@ -9,7 +9,7 @@ const Sidebar3 = () => {
       <Nav defaultActiveKey="/" className="flex-column">
         
         <LinkContainer to='/'>
-          <NavLink>Home</NavLink>
+          <NavLink >Home</NavLink>
         </LinkContainer>
         
         <LinkContainer to='/resume'>
